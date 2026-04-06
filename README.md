@@ -2,7 +2,7 @@
 
 A literary research plugin for writers. Finds real published works, extracts verified quotes with proper citations, and builds structured reference material around themes, authors, and craft techniques.
 
-Works standalone with manual archive verification, or connects to [literary-truth-mcp](https://github.com/highschoolsmokers/literary-truth-mcp) for machine-verified source grounding with an indexed corpus, claims database, and Paperless-ngx integration.
+Works standalone with manual archive verification, or connects to [literary-verity-mcp](https://github.com/highschoolsmokers/literary-verity-mcp) for machine-verified source grounding with an indexed corpus, claims database, and Paperless-ngx integration.
 
 ## What It Does
 
@@ -50,7 +50,7 @@ The `agents/literary-research.md` file can be used as a system prompt with any C
 
 ## MCP Integration (optional)
 
-The plugin works standalone — no infrastructure required. But when connected to [literary-truth-mcp](https://github.com/highschoolsmokers/literary-truth-mcp), every verification step is backed by an indexed corpus with vector embeddings, a curated claims database, and automated bibliographic checks.
+The plugin works standalone — no infrastructure required. But when connected to [literary-verity-mcp](https://github.com/highschoolsmokers/literary-verity-mcp), every verification step is backed by an indexed corpus with vector embeddings, a curated claims database, and automated bibliographic checks.
 
 ### What changes with MCP connected
 
@@ -65,17 +65,17 @@ The plugin works standalone — no infrastructure required. But when connected t
 
 ### Setup
 
-1. Install and configure [literary-truth-mcp](https://github.com/highschoolsmokers/literary-truth-mcp) (requires Node.js, Neon Postgres, Voyage AI, and Anthropic API keys)
+1. Install and configure [literary-verity-mcp](https://github.com/highschoolsmokers/literary-verity-mcp) (requires Node.js, Neon Postgres, Voyage AI, and Anthropic API keys)
 
 2. Add both the MCP server and this plugin to your `.mcp.json`:
 
 ```json
 {
   "mcpServers": {
-    "literary-truth": {
+    "literary-verity": {
       "command": "node",
       "args": ["dist/index.js"],
-      "cwd": "/path/to/literary-truth-mcp",
+      "cwd": "/path/to/literary-verity-mcp",
       "env": {
         "DATABASE_URL": "postgresql://...",
         "ANTHROPIC_API_KEY": "sk-ant-...",
