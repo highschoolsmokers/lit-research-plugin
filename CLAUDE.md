@@ -21,7 +21,7 @@ README.md                     — Installation, usage, and documentation
 
 - **The agent file is the product.** `agents/lit-research.md` is the system prompt that defines all behavior. Changes to plugin functionality happen there.
 - **Templates are scaffolding, not forms.** They define structure and expectations, but the agent adapts them to the specific research. A filled template should read like a useful document, not a filled-in form.
-- **MCP is optional.** The plugin must work fully without literary-verity-mcp. MCP tools add machine verification but are never required.
+- **MCP is optional.** The plugin must work fully without second-reader. MCP tools add machine verification but are never required.
 - **Confidence markers are non-negotiable.** Every quote and interpretation gets a confidence marker. This is the plugin's primary defense against hallucination and cannot be relaxed.
 
 ## Contributing
